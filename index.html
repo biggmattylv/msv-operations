@@ -12,18 +12,77 @@
     <header class="bg-dark text-white text-center py-3">
         <h1 class="display-4">Sophie Dashboard</h1>
     </header>
+
     <div class="container my-4">
-        <section id="overview" class="p-3 bg-light rounded shadow-sm mb-4">
-            <h2 class="mb-3">Overview</h2>
-            <p>Welcome to your Sophie Dashboard. This is a placeholder for your operational data.</p>
-        </section>
-        <section id="metrics" class="p-3 bg-light rounded shadow-sm mb-4">
-            <h2 class="mb-3">Key Metrics</h2>
-            <ul class="list-group">
-                <li class="list-group-item d-flex justify-content-between align-items-center">Metric 1: <span id="metric1" class="badge bg-primary rounded-pill">Loading...</span></li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">Metric 2: <span id="metric2" class="badge bg-primary rounded-pill">Loading...</span></li>
-            </ul>
-        </section>
+        <div class="row">
+            <!-- Module 1: Personal / MSV Operations -->
+            <div class="col-md-6 mb-4">
+                <section id="module-msv" class="p-3 bg-light rounded shadow-sm h-100">
+                    <h2 class="mb-3 text-primary">Personal / MSV Operations</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Personal Task Count: <span id="msv-task-count" class="badge bg-secondary rounded-pill">Loading...</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">MSV Leads This Week: <span id="msv-leads-week" class="badge bg-secondary rounded-pill">Loading...</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">MSV Deals Closed: <span id="msv-deals-closed" class="badge bg-secondary rounded-pill">Loading...</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Team Efficiency Score: <span id="msv-efficiency" class="badge bg-secondary rounded-pill">Loading...</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Current Projects % Complete: <span id="msv-projects-complete" class="badge bg-secondary rounded-pill">Loading...</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Open Invoices: <span id="msv-open-invoices" class="badge bg-secondary rounded-pill">Loading...</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Social Media Engagement: <span id="msv-social-engagement" class="badge bg-secondary rounded-pill">Loading...</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Website Traffic (MSV): <span id="msv-website-traffic" class="badge bg-secondary rounded-pill">Loading...</span></li>
+                    </ul>
+                </section>
+            </div>
+
+            <!-- Module 2: MMG Operations -->
+            <div class="col-md-6 mb-4">
+                <section id="module-mmg" class="p-3 bg-light rounded shadow-sm h-100">
+                    <h2 class="mb-3 text-success">MMG Operations</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">MMG Active Listings: <span id="mmg-active-listings" class="badge bg-info text-dark rounded-pill">Loading...</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">MMG Leads per Month: <span id="mmg-leads-month" class="badge bg-info text-dark rounded-pill">Loading...</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">MMG Avg. Time to Close: <span id="mmg-time-close" class="badge bg-info text-dark rounded-pill">Loading...</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">MMG Client Satisfaction: <span id="mmg-satisfaction" class="badge bg-info text-dark rounded-pill">Loading...</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">MMG Referrals: <span id="mmg-referrals" class="badge bg-info text-dark rounded-pill">Loading...</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">MMG Marketing Spend: <span id="mmg-marketing-spend" class="badge bg-info text-dark rounded-pill">Loading...</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">MMG Website Visits: <span id="mmg-website-visits" class="badge bg-info text-dark rounded-pill">Loading...</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">MMG Conversion Rate: <span id="mmg-conversion-rate" class="badge bg-info text-dark rounded-pill">Loading...</span></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Module 3: Seamless Operations -->
+            <div class="col-md-6 mb-4">
+                <section id="module-seamless" class="p-3 bg-light rounded shadow-sm h-100">
+                    <h2 class="mb-3 text-warning">Seamless Operations</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Seamless Active Properties: <span id="seamless-active-properties" class="badge bg-primary rounded-pill">Loading...</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Seamless Tasks Completed: <span id="seamless-tasks-completed" class="badge bg-primary rounded-pill">Loading...</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Seamless Open Tickets: <span id="seamless-open-tickets" class="badge bg-primary rounded-pill">Loading...</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Seamless Avg. Resolution Time: <span id="seamless-avg-resolution" class="badge bg-primary rounded-pill">Loading...</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Seamless User Engagement: <span id="seamless-user-engagement" class="badge bg-primary rounded-pill">Loading...</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Seamless Incident Rate: <span id="seamless-incident-rate" class="badge bg-primary rounded-pill">Loading...</span></li>
+                    </ul>
+                </section>
+            </div>
+
+            <!-- Module 4: Coachingbio.com Metrics -->
+            <div class="col-md-6 mb-4">
+                <section id="module-coachingbio" class="p-3 bg-light rounded shadow-sm h-100">
+                    <h2 class="mb-3 text-danger">Coachingbio.com Metrics</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Coaching New Signups: <span id="coaching-new-signups" class="badge bg-dark rounded-pill">Loading...</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Coaching Active Users: <span id="coaching-active-users" class="badge bg-dark rounded-pill">Loading...</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Coaching Course Completions: <span id="coaching-course-completions" class="badge bg-dark rounded-pill">Loading...</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Coaching Avg. Session Duration: <span id="coaching-avg-session" class="badge bg-dark rounded-pill">Loading...</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Coaching Feedback Score: <span id="coaching-feedback-score" class="badge bg-dark rounded-pill">Loading...</span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Coaching Conversion Rate: <span id="coaching-conversion-rate" class="badge bg-dark rounded-pill">Loading...</span></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+
+        <!-- Central Logs section - spanning full width below modules -->
         <section id="logs" class="p-3 bg-light rounded shadow-sm mb-4">
             <h2 class="mb-3">Recent Logs</h2>
             <div id="log-output" class="bg-white border p-3 rounded" style="min-height: 100px; overflow-y: auto;">
@@ -31,10 +90,8 @@
                 <p>No logs available yet.</p>
             </div>
         </section>
+
     </div>
-    <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2024 Sophie Dashboard</p>
-    </footer>
 
     <!-- Bootstrap JS (Popper.js first, then Bootstrap JS) -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
