@@ -1,18 +1,33 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Placeholder for fetching data
-    function fetchData() {
-        // Simulate API calls
-        setTimeout(() => {
-            document.getElementById('metric1').textContent = '1,234 (Dummy Data)';
-            document.getElementById('metric2').textContent = '56.78% (Dummy Data)';
+    async function fetchData() {
+        try {
+            // Fetch Metrics
+            const metricsResponse = await fetch('metrics.json');
+            const metrics = await metricsResponse.json();
+            document.getElementById('metric1').textContent = metrics.metric1;
+            document.getElementById('metric2').textContent = metrics.metric2;
 
+            // Fetch Logs
+            const logsResponse = await fetch('logs.json');
+            const logs = await logsResponse.json();
             const logOutput = document.getElementById('log-output');
-            logOutput.innerHTML = `
-                <p>[${new Date().toLocaleString()}] INFO: System started successfully.</p>
-                <p>[${new Date().toLocaleString()}] DEBUG: Processing daily reports.</p>
-                <p>[${new Date().toLocaleString()}] WARNING: Disk space 80% full.</p>
-            `;
-        }, 1000);
+            logOutput.innerHTML = ''; // Clear existing logs
+
+            logs.forEach(log => {
+                const p = document.createElement('p');
+                p.textContent = `[${new Date(log.timestamp).toLocaleString()}] ${log.level}: ${log.message}`;
+                // Optional: Add styling based on log level
+                if (log.level === 'ERROR') p.style.color = 'red';
+                if (log.level === 'WARNING') p.style.color = 'orange';
+                logOutput.appendChild(p);
+            });
+
+        } catch (error) {
+            console.error('Error fetching data:', error);
+            document.getElementById('metric1').textContent = 'Error loading';
+            document.getElementById('metric2').textContent = 'Error loading';
+            document.getElementById('log-output').innerHTML = '<p style="color: red;">Failed to load data. Please check the console for details.</p>';
+        }
     }
 
     fetchData();
