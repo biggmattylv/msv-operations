@@ -52,8 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // Fetch for MSV Operations
         fetchModuleMetrics('MSV', 'msv_metrics.json', {
             'personal-task-count': 'msv-task-count',
-            'msv-leads-week': 'msv-leads-week',
-            'msv-deals-closed': 'msv-deals-closed',
             'msv-efficiency': 'msv-efficiency',
             'msv-projects-complete': 'msv-projects-complete',
             'msv-open-invoices': 'msv-open-invoices',
@@ -63,24 +61,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Fetch for MMG Operations
         fetchModuleMetrics('MMG', 'mmg_metrics.json', {
-            'mmg-active-listings': 'mmg-active-listings',
-            'mmg-leads-month': 'mmg-leads-month',
-            'mmg-time-close': 'mmg-time-close',
-            'mmg-satisfaction': 'mmg-satisfaction',
-            'mmg-referrals': 'mmg-referrals',
-            'mmg-marketing-spend': 'mmg-marketing-spend',
-            'mmg-website-visits': 'mmg-website-visits',
-            'mmg-conversion-rate': 'mmg-conversion-rate'
+            'mmg-active-projects': 'mmg-active-projects',
+            'mmg-projects-pipeline': 'mmg-projects-pipeline',
+            'mmg-revenue-ytd': 'mmg-revenue-ytd',
+            'mmg-completion-rate': 'mmg-completion-rate',
+            'mmg-satisfaction-score': 'mmg-satisfaction-score',
+            'mmg-crew-utilization': 'mmg-crew-utilization',
+            'mmg-material-spend': 'mmg-material-spend',
+            'mmg-open-invoices': 'mmg-open-invoices'
         });
 
         // Fetch for Seamless Operations
         fetchModuleMetrics('Seamless', 'seamless_metrics.json', {
-            'seamless-active-properties': 'seamless-active-properties',
-            'seamless-tasks-completed': 'seamless-tasks-completed',
-            'seamless-open-tickets': 'seamless-open-tickets',
-            'seamless-avg-resolution': 'seamless-avg-resolution',
-            'seamless-user-engagement': 'seamless-user-engagement',
-            'seamless-incident-rate': 'seamless-incident-rate'
+            'seamless-hubspot-companies': 'seamless-hubspot-companies',
+            'seamless-hubspot-deals': 'seamless-hubspot-deals',
+            'seamless-hubspot-tasks': 'seamless-hubspot-tasks',
+            'seamless-hubspot-engagements': 'seamless-hubspot-engagements',
+            'seamless-new-prospects': 'seamless-new-prospects',
+            'seamless-active-negotiation': 'seamless-active-negotiation'
         });
 
         // Fetch for Coachingbio.com Metrics
